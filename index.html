@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Shortcut Icon -->
+    <link rel="shortcut icon" href="./images/logo.png" />
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="./style/all.min.css" />
+    <!-- Normalize File -->
+    <link rel="stylesheet" href="./style/normalize.css" />
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <h1>Password Generator</h1>
+    <div class="container">
+      <form action="">
+        <div class="pairs input-field">
+          <label for="pass-len" title="Password Length">Password Length</label>
+          <input type="number" id="pass-len" min="1" required />
+        </div>
+        <div class="pairs checkbox" title="Include Letters In Password">
+          <input type="checkbox" name="letters" id="letters" checked />
+          <label for="letters">Letters</label>
+        </div>
+        <div
+          class="pairs input-field select"
+          title="Choose What Case To Include In Your Password"
+        >
+          <label for="letters-case">Letters Case</label>
+          <select name="letters-case" id="letters-case" required>
+            <option value="Both" selected>Both</option>
+            <option value="Lower">Lowercase</option>
+            <option value="Upper">Uppercase</option>
+          </select>
+        </div>
+        <div class="pairs checkbox" title="Include Numbers In Password">
+          <input type="checkbox" name="numbers" id="numbers" checked />
+          <label for="numbers">Numbers</label>
+        </div>
+        <div class="pairs checkbox" title="Include Symbols In Password">
+          <input type="checkbox" name="symbols" id="symbols" checked />
+          <label for="symbols">Symbols</label>
+        </div>
+        <input
+          type="submit"
+          class="generate"
+          value="Generate"
+          title="Generate Your Password"
+        />
+        <hr />
+        <footer>
+          <div class="pairs">
+            <label for="">Your password is</label>
+            <input type="text" id="answer" disabled />
+          </div>
+          <button class="copy" id="copy" title="Copy Password">
+            Copy
+            <span>Copy to clipboard</span>
+          </button>
+        </footer>
+      </form>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
