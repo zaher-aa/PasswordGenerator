@@ -70,9 +70,13 @@ const app = () => {
       }
 
       let randomBoundry = userSelect.length;
+      let shuffledUserSelect = [...userSelect]
+        .sort(() => Math.random() - 0.5)
+        .join("");
 
       for (let i = 0; i < passwordLength.value; i++) {
-        password.value += userSelect[Math.floor(Math.random() * randomBoundry)];
+        password.value +=
+          shuffledUserSelect[Math.floor(Math.random() * randomBoundry)];
       }
     } else alert("You Should Choose What Your Password Should Contain");
 
